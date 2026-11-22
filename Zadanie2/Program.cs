@@ -12,17 +12,15 @@ foreach (KeyValuePair<string, int> item in cennik)
 }
 
 string? nowyPrzedmiot;
-while (true)
+while (true)    
 {
     Console.WriteLine("Podaj nazwe przedmiotu który chcesz dodać do oferty: ");
     nowyPrzedmiot = Console.ReadLine();
-
     if (int.TryParse(nowyPrzedmiot, out _))
     {
         Console.WriteLine("Nazwa przedmiotu nie może być liczbą.");
         continue;
     }
-
     if (string.IsNullOrWhiteSpace(nowyPrzedmiot))
     {
         Console.WriteLine("Nazwa przedmiotu nie może być pusta :C");
